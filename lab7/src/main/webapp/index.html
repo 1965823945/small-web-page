@@ -1,0 +1,13 @@
+﻿<html><head><meta charset="utf-8"></head><head></head><body>
+<a href="welcome/home"> Demo</a>
+<p>Please select an option</p>
+    <ol>
+      <li><a href="welcome/student/list" th:href="@{/student/list}">Students List</a></li>
+      <li><a href="welcome/subject/list" th:href="@{/subject/list}">Subjects List</a></li>
+      <!-- <li><a href="welcome/subject/list" th:href="@{/subject/list}">Log In</a></li> -->
+      <!-- <li><a href="userprofile.html" th:href="@{/userprofile}">See User Profile</a></li> -->
+    </ol>
+<form action="welcome" method="POST">
+		<input type="submit" value="Вызвать сервлет">
+</form>
+</body></html>

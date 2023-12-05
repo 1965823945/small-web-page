@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>Welcome to the Virtual School</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" media="all" href="../../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
+</head>
+
+<body>
+
+  <h1>Students list</h1>
+
+  <table>
+    <tr>
+      <th>Student FirstName</th>
+      <th></th>
+      <th>Student LastName</th>
+      <th></th>
+      <th>Student Data</th>
+    </tr>
+    <tr th:each="st : ${students}" th:class="${stStat.odd}? 'odd'">
+
+      <td th:text="${st.firstName}">Tob</td>
+      <td></td>
+      <td th:text="${st.lastName}">tomato</td>
+      <td></td>
+      <td th:text="${#dates.format(st.startDate,'dd-MM-yyyy')}">13 jan 2011</td>
+      <!--<td th:text="${#aggregates.sum(o.orderLines.{purchasePrice * amount})}">23.32</td>-->
+      <td>
+        <!-- <a href="home.html" th:href="@{/order/details(orderId=${o.id})}">view</a>-->
+      </td>
+    </tr>
+  </table>
+
+
+  <p>
+    <a href="../home.html" th:href="@{/}">Return to home</a>
+  </p>
+
+</body>
+
+</html>
